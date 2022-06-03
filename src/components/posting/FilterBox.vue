@@ -1,23 +1,19 @@
 <template>
-    <div>
-        <div @click="$store.commit('setFilter',instarFilter)" class="filter-item" 
-        :class="instarFilter" :style="{backgroundImage: `url(${$store.state.imageUrl})`}">
+        <div class="filter-item"  @click="$store.commit('setFilter',instarFilter)"
+        :class="instarFilter" :style="{backgroundImage: `url(${$store.state.imgUrl})`}">
             {{instarFilter}}
         </div>
-    </div> 
 </template>
 
 <script>
-import { mapState } from 'vuex'
 export default {
     name:"_filterBox",
     methods:{
     },
     computed:{
-        ...mapState(['instarFilter'])
     },
     props:{
-        instarFilter:Array
+        instarFilter:String
     }
 }
 </script>

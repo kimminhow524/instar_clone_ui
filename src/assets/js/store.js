@@ -12,6 +12,7 @@ const store = createStore({
       instarFilter,
       imgUrl: "",
       useFilter: "",
+      writeText:"",
     };
   },
   mutations: {
@@ -25,11 +26,13 @@ const store = createStore({
       state.moreCount++;
     },
     setImageUrl(state, data) {
-      console.log(data);
       state.imgUrl = data;
     },
     setFilter(state, data) {
       state.useFilter = data;
+    },
+    setWriteText(state,data){
+      state.writeText = data;
     },
   },
   actions: {

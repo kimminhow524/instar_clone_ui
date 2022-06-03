@@ -21,7 +21,7 @@ export default {
         ...mapState(['sampleData'])
     },
     props:{
-      data:Array
+      data:Object
     },
     created(){
     }
